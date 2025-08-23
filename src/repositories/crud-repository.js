@@ -17,7 +17,10 @@ class CrudRepository {
                 where: {
                     id: data
                 }
-            })
+            });
+            if(!response) {
+                throw new AppError('Not able tp find the resource', StatusCodes.NOT_FOUND)
+            }
             return response;
         }
 
