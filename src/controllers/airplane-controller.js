@@ -3,7 +3,6 @@ const { StatusCodes } = require('http-status-codes');
 
 const { AirplaneService } = require('../services');
 const { SuccessResponse, ErrorResponse } = require('../utils/common');
-const { response } = require('express');
 
 /**
  * 

@@ -1,6 +1,6 @@
 const { AirplaneRepository } = require('../repositories');
 const { StatusCodes } = require('http-status-codes');
-
+const AppError = require('../utils/errors/app-error')
 // Create an instance (different name than the class)
 const airplaneRepository = new AirplaneRepository();
 
