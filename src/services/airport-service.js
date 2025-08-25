@@ -1,8 +1,8 @@
-const { AirportRespository } = require('../repositories');
+const { AirportRepository } = require('../repositories');
 const { StatusCodes } = require('http-status-codes');
 const AppError = require('../utils/errors/app-error')
 // Create an instance (different name than the class)
-const AirportRepository = new AirportRespository();
+const AirportRepository = new AirportRepository();
 
 async function createAirport(data) {
   try {
@@ -43,7 +43,7 @@ async function getAirport(id) {
 
 async function destroyAirport(id){
   try {
-  const airport = await AirportRespository.destroy(id);
+  const airport = await AirportRepository.destroy(id);
   return airport;
  } catch (error){
      if(error.StatusCodes == StatusCodes.NOT_FOUND) {
